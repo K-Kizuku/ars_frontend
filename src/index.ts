@@ -1,4 +1,21 @@
-import { ActionTree, View, createVElement, App } from "./framework";
+import {
+  ActionTree,
+  View,
+  createVElement,
+  App,
+  routerDOM,
+  PagesInfo,
+  Link,
+  routingElement,
+} from "@/framework";
+
+/**
+ * ルーティング設定
+ */
+const pages: PagesInfo = {
+  "/": createVElement("div", {}, "testpage"),
+  "/home": createVElement("div", {}, "HOME"),
+};
 
 /**
  * State: 状態管理
@@ -79,100 +96,102 @@ const actions: Actions = {
 //   );
 // };
 const view: View<State, Actions> = (state, actions) => {
-  // prettier-ignore
   return createVElement(
-    'div',
+    "div",
     {
-      class: 'nes-container is-rounded',
-      style: 'padding: 2rem;'
+      class: "nes-container is-rounded",
+      style: "padding: 2rem;",
     },
     createVElement(
-      'h1',
+      "h1",
       {
-        class: 'title',
-        style: 'margin-bottom: 2rem;'
+        class: "title",
+        style: "margin-bottom: 2rem;",
       },
-      createVElement('i', { class: 'nes-icon heart is-medium' }),
-      'Virtual DOM TODO App !!!!!!!!!!!!'
+      createVElement("i", { class: "nes-icon heart is-medium" }),
+      "Virtual DOM TODO App!!"
     ),
+    routerDOM(pages),
+    Link("home", "/home"),
+    Link("OKKKKK", "/"),
     createVElement(
-      'form',
+      "form",
       {
-        class: 'nes-container',
-        style: 'margin-bottom: 2rem;'
+        class: "nes-container",
+        style: "margin-bottom: 2rem;",
       },
       createVElement(
-        'div',
+        "div",
         {
-          class: 'nes-field',
-          style: 'margin-bottom: 1rem;',
+          class: "nes-field",
+          style: "margin-bottom: 1rem;",
         },
         createVElement(
-          'label',
+          "label",
           {
-            class: 'label',
-            for: 'task-title'
+            class: "label",
+            for: "task-title",
           },
-          'Title'
+          "Title"
         ),
-        createVElement('input', {
-          type: 'text',
-          id: 'task-title',
-          class: 'nes-input',
+        createVElement("input", {
+          type: "text",
+          id: "task-title",
+          class: "nes-input",
           value: state.form.title,
           oninput: (ev: Event) => {
-            const target = ev.target as HTMLInputElement
-            state.form.title = target.value
-            actions.validate(state, target.value)
-          }
-        }),
+            const target = ev.target as HTMLInputElement;
+            state.form.title = target.value;
+            actions.validate(state, target.value);
+          },
+        })
       ),
       createVElement(
-        'p',
+        "p",
         {
-          class: 'nes-text is-error',
-          style: `display: ${state.form.hasError ? 'display' : 'none'}`,
+          class: "nes-text is-error",
+          style: `display: ${state.form.hasError ? "display" : "none"}`,
         },
-        'Enter a value between 3 and 20 characters'
+        "Enter a value between 3 and 20 characters"
       ),
       createVElement(
-        'button',
+        "button",
         {
-          type: 'button',
-          class: 'nes-btn is-primary',
+          type: "button",
+          class: "nes-btn is-primary",
           onclick: () => {
-            if (state.form.hasError) return
-            actions.createTask(state, state.form.title)
-          }
+            if (state.form.hasError) return;
+            actions.createTask(state, state.form.title);
+          },
         },
-        'Create'
+        "Create"
       )
     ),
     createVElement(
-      'ul',
-      { class: 'nes-list is-disc nes-container' },
+      "ul",
+      { class: "nes-list is-disc nes-container" },
       ...state.tasks.map((task, i) => {
         return createVElement(
-          'li',
+          "li",
           {
-            class: 'item',
-            style: 'margin-bottom: 1rem;'
+            class: "item",
+            style: "margin-bottom: 1rem;",
           },
           task,
           createVElement(
-            'button',
+            "button",
             {
-              type: 'button',
-              class: 'nes-btn is-error',
-              style: 'margin-left: 1rem;',
-              onclick: () => actions.removeTask(state, i)
+              type: "button",
+              class: "nes-btn is-error",
+              style: "margin-left: 1rem;",
+              onclick: () => actions.removeTask(state, i),
             },
-            '×'
+            "×"
           )
-        )
+        );
       })
     )
-  )
+  );
 };
 
 new App<State, Actions>({
