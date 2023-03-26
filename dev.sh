@@ -1,2 +1,2 @@
-esbuild --bundle --minify --outdir=dist ./src/**/*.ts
+esbuild --bundle --minify --outdir=dist --watch ./src/**/*.ts &
 npx http-server .
