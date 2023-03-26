@@ -180,11 +180,14 @@ const isEventAttribute = (attribute: string): boolean => {
 const hasChanged = (a: NodeType, b: NodeType): ChangedType => {
   // different type
   if (typeof a !== typeof b) {
+    console.log("type");
     return ChangedType.Type;
   }
 
   // different string
   if (!isVNode(a) && a !== b) {
+    console.log("text");
+
     return ChangedType.Text;
   }
 
@@ -217,10 +220,12 @@ const updateElement = (
     parent.appendChild(createElement(newNode));
     return;
   }
-  // if (!parent.hasChildNodes()) {
-  //   return;
-  // }
+  console.log("new", newNode);
+  if (!parent.hasChildNodes()) {
+    return;
+  }
   const target = parent.childNodes[index];
+  console.log("child", target);
 
   // newNodeがない場合はそのノードを削除する
   if (!newNode) {
@@ -346,6 +351,7 @@ const actions: Actions = {
   },
 
   removeTask(state, index: number) {
+    console.log(state.tasks);
     state.tasks.splice(index, 1);
   },
 };
