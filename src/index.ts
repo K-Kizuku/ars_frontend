@@ -8,13 +8,15 @@ import {
   Link,
   routingElement,
 } from "@/framework";
-import { footer } from "@/components/footer";
+import { sidebar } from "@/components/sidebar";
+import { footer } from "./components/footer";
 
 /**
  * ルーティング設定
  */
 const pages: PagesInfo = {
   "/": createVElement("div", {}, "testpage"),
+  // "/sidebar": sidebar
   "/footer": footer
 };
 
@@ -113,6 +115,7 @@ const view: View<State, Actions> = (state, actions) => {
       "Virtual DOM TODO App!!"
     ),
     routerDOM(pages),
+    // Link("home", "/sidebar"),
     Link("home", "/footer"),
     Link("OKKKKK", "/"),
     createVElement(
