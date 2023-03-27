@@ -8,14 +8,41 @@ export const login = createVElement(
         "main", 
         { class: "main" },
         createVElement(
-            "h1",
+            "div",
             {},
-            "welcome ASFA!",
+            createVElement(
+                "h1",
+                {},
+                "welcome ASFA!",
+            ),
+            createVElement(
+                "h2",
+                {},
+                "新規会員登録"
+            ),
         ),
         createVElement(
-            "h2",
-            {  },
-            "新規会員登録"
+            "div",
+            {},
+            createVElement(
+                "form",
+                { id:"userIconForm",enctype:"multipart/form-data"},
+                createVElement(
+                    "input",
+                    {
+                        type:"file",
+                        name:"userIcon",
+                        accept:"image/*"
+                    },
+                ),
+                createVElement(
+                    "input",
+                    {
+                        type:"submit",
+                        value:"登録", 
+                    },
+                )
+            )
         ),
         createVElement(
             "div",
