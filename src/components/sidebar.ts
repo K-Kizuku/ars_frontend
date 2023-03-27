@@ -6,18 +6,19 @@ export const sidebar = createVElement(
   createVElement(
     "div",
     {class: "wrapper",
-    style:"position: absolute; left: 0;;"
-  },createVElement(
+    style:"position: absolute; writing-mode: vertical-rl; top: 0%; left: 0%; height: 100%;"
+  },
+    createVElement(
       "h2", { 
          color: "#FFF",
-         // fontSize: 10%,
+        //  width: "60%",
          //  writing-mode: vertical-rl;
            },
-        "All Japan Full Scratch Asocciation"),
+        " 　All Japan Full Scratch Asocciate "),
         
   createVElement(
     "div", {
-        width: "20%",
+        width: "50%",
         height: "100%", 
         backgroundColor: "#0000000"
   }
