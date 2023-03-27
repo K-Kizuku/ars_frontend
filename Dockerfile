@@ -9,7 +9,7 @@ WORKDIR /test
 COPY package*.json ./
 COPY . ./
 
-RUN esbuild --bundle --minify --outdir=test test/*.ts
+RUN esbuild --bundle --minify --outdir=dist --watch ./src/**/*.ts
 
 
 FROM node:16-alpine
@@ -22,4 +22,4 @@ RUN npm install --only=production
 
 EXPOSE 8080
 
-CMD ["npx", "http-server", "./test"]
+CMD ["npx", "http-server", "."]

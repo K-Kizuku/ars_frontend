@@ -1,4 +1,4 @@
-import type { NodeType, Attributes, View, VNode } from "./types";
+import type { NodeType, Attributes, VNode } from "./types";
 
 /**
  * 仮想DOMの生成
@@ -21,6 +21,7 @@ export const createElement = (node: NodeType): HTMLElement | Text => {
 
   const element = document.createElement(node.nodeName);
   setAttributes(element, node.attributes);
+  console.log(node);
   node.children.forEach((child) => element.appendChild(createElement(child)));
   return element;
 };
@@ -101,6 +102,7 @@ export const updateElement = (
   newNode: NodeType,
   index = 0
 ): void => {
+  console.log("blbubyvyuvutyctyc");
   // oldNodeがない場合は新しいノード
   if (!oldNode) {
     parent.appendChild(createElement(newNode));

@@ -1,4 +1,5 @@
 import { createVElement, VNode, NodeType, createElement, App } from "../core";
+import { beforeRender } from "../life";
 
 export type PagesInfo = {
   [path: string]: NodeType;
@@ -44,6 +45,7 @@ export const Link = (children: NodeType, path: string): VNode =>
     "a",
     {
       class: "default-link-component-button",
+      //   defer: "yes",
       href: path,
       onclick: (event: Event) => {
         event.preventDefault();
