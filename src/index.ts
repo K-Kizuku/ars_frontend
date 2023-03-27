@@ -10,8 +10,9 @@ import {
 } from "@/framework";
 // import { sidebar } from "@/components/sidebar";
 // import { footer } from "./components/footer";
- import { login } from "./app/pages/login";
+//  import { login } from "./app/pages/login";
 // import { backcolorfootersidebar } from "./components/backcolorfootersidebar";
+import { selection } from "./app/pages/selection";
 
 
 /**
@@ -21,8 +22,9 @@ const pages: PagesInfo = {
   "/": createVElement("div", {}, "testpage"),
   // "/sidebar": sidebar
   // "/footer": footer
-   "/login": login
+  //  "/login": login
   //  "/backcolorfootersidebar": backcolorfootersidebar
+  "/selection": selection
   
 };
 
@@ -123,8 +125,10 @@ const view: View<State, Actions> = (state, actions) => {
     routerDOM(pages),
     //  Link("home", "/sidebar"),
     // Link("home", "/footer"),
-     Link("home", "/login"),
+    //  Link("home", "/login"),
     // Link("home", "/backcolorfootersidebar"),
+    Link("home", "/selection"),
+     Link("home", "/selection"),
     Link("OKKKKK", "/"),
     createVElement(
       "form",
