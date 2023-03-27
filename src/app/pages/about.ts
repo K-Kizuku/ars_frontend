@@ -1,5 +1,6 @@
 import { createVElement } from "@/framework";
 
+// ページ名はabout
 export const about = createVElement(
     "body",
     { class: "body" },

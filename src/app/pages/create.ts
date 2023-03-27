@@ -1,7 +1,9 @@
 import { createElement, createVElement } from "@/framework";
+
+//ページ名は新規登録
 export const login = createVElement(
     "body",
-    { class: "temp" },
+    { class: "body" },
     createVElement(
         "main", 
         { class: "main" },

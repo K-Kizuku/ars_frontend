@@ -1,5 +1,6 @@
 import { createVElement } from "@/framework";
 
+// ページ名はログインor新規登録
 export const selection = createVElement(
     "body",
     { class: "body" },

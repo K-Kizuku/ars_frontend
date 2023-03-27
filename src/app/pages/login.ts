@@ -1,20 +1,27 @@
 import { createElement, createVElement } from "@/framework";
 
+// ページ名はログイン
 /* アイコン編集欄は未記入 */
 export const login = createVElement(
     "body",
-    { class: "temp" },
+    { class: "body" },
     createVElement(
         "main", 
         { class: "main" },
         createVElement(
+            "img",
+            { src:"src/image/akiko.png", alt:"akiko"},
+        ),
+        createVElement(
             "h1",
-            {},
-            "また来てしまったんか",
+            {
+                style:"background-color: red;"
+            },
+            "また来てしまったんか!",
         ),
         createVElement(
             "h2",
-            {  },
+            {},
             "ログイン"
         ),
         createVElement(
@@ -22,7 +29,7 @@ export const login = createVElement(
             {},
             createVElement(
                 "form",
-                {class: "userdata"},
+                {class: "form", id:"userform"},
                 createVElement(
                     "input",
                     {
@@ -45,7 +52,7 @@ export const login = createVElement(
                     type:"submit",
                     value:"Enter",
                     },                   
-                )
+                ),
             )
         )
     )

@@ -1,4 +1,6 @@
 import { createVElement } from "@/framework";
+
+// ページ名はMyTalkRoom
 export const temp = createVElement(
     "body",
     { class: "body" },
