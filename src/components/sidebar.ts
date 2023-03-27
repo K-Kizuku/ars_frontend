@@ -18,7 +18,7 @@ export const sidebar = createVElement(
         
   createVElement(
     "div", {
-        width: "50%",
+        width: "40%",
         height: "100%", 
         backgroundColor: "#0000000"
   }
