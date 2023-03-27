@@ -7,8 +7,8 @@ export const footer = createVElement(
     "div",
     {class: "wrapper",
     style:"position: absolute; left: 0; bottom: 0;"
-  
   },
+  
      createVElement(
       "div",{
         style:"position: absolute; left: 0; bottom: 0;"       
