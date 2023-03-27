@@ -32,7 +32,7 @@ export const about = createVElement(
             createVElement(
                 "h2",
                 { style:"width: 60%; height; 30%; margin: auto"  },
-                "人類が健全で正常な世界で生きていけるように、他の人類が光の中で暮らす間、我々は暗闇の中に立ち、それと戦い、封じ込め、人々の目から遠ざけなければならない。"
+                "我々、全日本フルスクラッチ協会は「全て書けば、全て分かる」を理念とし、最低ラインを言語機能と定めてフルスクラッチで開発を行いました。"
             )
         ),
         createVElement(//ここで写真とテキストを表示・枚数分だけ複製
@@ -47,9 +47,54 @@ export const about = createVElement(
             createVElement(
                 "h2",
                 { style:"width: 60%; height; 30%; margin: auto" },
-                "fugafuga"
+                "フルスクラッチとは、完全にゼロの何もない状態からあらゆる機能を実装していくことを指します。つまり「フルスクラッチで開発する」とは、ライブラリやフレームワークを使わず、必要な機能を全て自分で実装することを意味します。"
             )
-        )
+        ),
+        createVElement(//ここで写真とテキストを表示・枚数分だけ複製
+            "div",
+            {
+                style:"display:flex;" 
+            },
+            createVElement(
+                "img",
+                {src:"src/img/about3.jpeg" ,style:"width: 30%; height: 30%; margin:1rem 2rem"},
+            ),
+            createVElement(
+                "h2",
+                { style:"width: 60%; height; 30%; margin: auto" },
+                "フルスクラッチでの開発は、自分たちの目的に合わせて機能を細かく制御することができるため、柔軟性が高く、プログラムの効率や速度も高めることができます。"
+            )
+        ),
+        createVElement(//ここで写真とテキストを表示・枚数分だけ複製
+            "div",
+            {
+                style:"display:flex;" 
+            },
+            createVElement(
+                "img",
+                {src:"src/img/about4.jpeg" ,style:"width: 30%; height: 30%; margin:1rem 2rem"},
+            ),
+            createVElement(
+                "h2",
+                { style:"width: 60%; height; 30%; margin: auto" },
+                "我々が開発したものは「全て」です。"
+            )
+        ),
+        createVElement(//ここで写真とテキストを表示・枚数分だけ複製
+            "div",
+            {
+                style:"display:flex;" 
+            },
+            createVElement(
+                "img",
+                {src:"src/img/about5.jpeg" ,style:"width: 30%; height: 30%; margin:1rem 2rem"},
+            ),
+            createVElement(
+                "h2",
+                { style:"width: 60%; height; 30%; margin: auto" },
+                "フルスクラッチ開発では「全て書けば、全て分かる」ように、全てにおいて貴重な学びが得られます。ぜひ全日本フルスクラッチ協会への入会をご検討ください。"
+            )
+        ),
 
 /* サイドの会員名簿など（未記載）はバックから取ってくるけど処理が分からん */
     )
