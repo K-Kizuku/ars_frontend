@@ -6,17 +6,19 @@ import { createVElement } from "@/framework";
 // ページ名はログイン
 /* アイコン編集欄は未記入 */
 export const login = createVElement(
-    "body",
+    "div",
     { class: "backgroundColor",
-      style:"background: #D9D9D9",
-      
+      // style: "width: 100%, hight: 100%",
+      background: "#D9D9D9",
+      style: "margin: 0 9% 0 12%",
     },
+
     footer,
     sidebar,
     createVElement(
         "main", 
         { class: "main" ,
-          style: "height: 100%"
+          style: "margin: 0 0 % 0",
       },
         createVElement(
           "div",
@@ -30,6 +32,7 @@ export const login = createVElement(
             },
             "また来てしまったんか! "
         ),
+        
         createVElement(
           "div",
         { class: "wrapperin",
@@ -45,6 +48,7 @@ export const login = createVElement(
             height: "30%",
           },
           "ログイン"
+        ),
         ),
         ),
         createVElement(
@@ -86,4 +90,4 @@ export const login = createVElement(
             
         )
     )
-    )))
+    ))
