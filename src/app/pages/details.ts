@@ -1,5 +1,5 @@
 import { createVElement } from "@/framework";
-export const temp = createVElement(
+export const details = createVElement(
     "body",
     { class: "body" },
     createVElement(
