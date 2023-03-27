@@ -8,13 +8,24 @@ import {
   Link,
   routingElement,
 } from "@/framework";
+// import { sidebar } from "@/components/sidebar";
+// import { footer } from "./components/footer";
+//  import { login } from "./app/pages/login";
+// import { backcolorfootersidebar } from "./components/backcolorfootersidebar";
+import { create } from "./app/pages/create";
+
 
 /**
  * ルーティング設定
  */
 const pages: PagesInfo = {
   "/": createVElement("div", {}, "testpage"),
-  "/home": createVElement("div", {}, "HOME"),
+  // "/sidebar": sidebar
+  // "/footer": footer
+  //  "/login": login
+  //  "/backcolorfootersidebar": backcolorfootersidebar
+  "/create": create
+  
 };
 
 /**
@@ -112,7 +123,11 @@ const view: View<State, Actions> = (state, actions) => {
       "Virtual DOM TODO App!!"
     ),
     routerDOM(pages),
-    Link("home", "/home"),
+    //  Link("home", "/sidebar"),
+    // Link("home", "/footer"),
+    //  Link("home", "/login"),
+    // Link("home", "/backcolorfootersidebar"),
+    Link("home", "/create"),
     Link("OKKKKK", "/"),
     createVElement(
       "form",
