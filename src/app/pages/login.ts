@@ -8,10 +8,10 @@ import { createVElement } from "@/framework";
 export const login = createVElement(
   "div",
   {
-    class: "backgroundColor",
+    class: "backgroundColor",style:"background-color: #fffffff;width:100vw;height:100vh; padding-left: 5%;" 
     // style: "width: 100%, hight: 100%",
     // background: "#D9D9D9",
-    style: "margin: 0 9% 0 12%",
+    // style: "margin: 0 9% 0 12%",
   },
 
   footer,
