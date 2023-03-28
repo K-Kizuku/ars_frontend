@@ -1,5 +1,5 @@
 import { ActionTree } from "@/framework";
-import { State } from "../states/states";
+import { State } from "../state/states";
 export interface Actions extends ActionTree<State> {
   /** タイトルの入力チェックを行う */
   validate: (state: State, title: string) => boolean;
