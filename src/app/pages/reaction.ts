@@ -1,7 +1,7 @@
 import { createVElement } from "@/framework";
 
 // ページ名はMyTalkRoom
-export const myTalkRoom = createVElement(
+export const reaction = createVElement(
     "body",
     { class: "body",style:"background-color: #D9D9D9;" },
     createVElement(
