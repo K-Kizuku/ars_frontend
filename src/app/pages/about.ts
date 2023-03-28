@@ -5,7 +5,7 @@ import { sidebar } from "@/components/sidebar";
 // ページ名はabout
 export const about = createVElement(
     "body",
-    { class: "body",style:"background-color: #D9D9D9;"  },
+    { class: "body",style:"background-color: #fffffff;width:70vw;height:100vh; padding-left: 4%;" },
     footer,
     sidebar,
     createVElement(
@@ -99,7 +99,15 @@ export const about = createVElement(
                 "フルスクラッチ開発では「全て書けば、全て分かる」ように、全てにおいて貴重な学びが得られます。ぜひ全日本フルスクラッチ協会への入会をご検討ください。"
             )
         ),
+        createVElement(
+            "body",
+        { 
+            class: "backgroundColor",
+            style:"background: #fffacd;width:21vw;height:50vh; margin: -35rem 0 45rem 65rem " ,
+          
+      },
 
     /* サイドの会員名簿など（未記載）はバックから取ってくるけど処理が分からん */
   )
-);
+)
+)

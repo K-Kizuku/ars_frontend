@@ -5,7 +5,7 @@ import { sidebar } from "@/components/sidebar";
 // ページ名はMyTalkRoom
 export const myTalkRoom = createVElement(
     "body",
-    { class: "body",style:"background-color: #fffffff;width:100vw;height:100vh; padding-left: 5%;" },
+    { class: "body",style:"background-color: #fffffff;width:70vw;height:70vh; padding-left: 5%;" },
     footer,
     sidebar,
     createVElement(
