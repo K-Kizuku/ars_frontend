@@ -12,9 +12,11 @@ import {
 // import { footer } from "./components/footer";
 //  import { login } from "./app/pages/login";
 // import { backcolorfootersidebar } from "./components/backcolorfootersidebar";
+// import { home } from "./app/pages/homepage";
+import { about } from "./app/pages/about";
+
 
 import { selection } from "./app/pages/selection";
-
 import { create } from "./app/pages/create";
 
 
@@ -28,10 +30,11 @@ const pages: PagesInfo = {
   // "/footer": footer
   //  "/login": login
   //  "/backcolorfootersidebar": backcolorfootersidebar
-
-  "/selection": selection
-
-  "/create": create
+  // "/selection": selection,
+  // "/create": create
+  // "/home": home
+  "/about": about
+  
 
   
 };
@@ -135,12 +138,11 @@ const view: View<State, Actions> = (state, actions) => {
     // Link("home", "/footer"),
     //  Link("home", "/login"),
     // Link("home", "/backcolorfootersidebar"),
-
-    Link("home", "/selection"),
-     Link("home", "/selection"),
-
-    Link("home", "/create"),
-
+    //  Link("home", "/selection"),
+    // Link("home", "/create"),
+    // Link("home", "/home"),
+    Link("about", "/about"),
+    
     Link("OKKKKK", "/"),
     createVElement(
       "form",

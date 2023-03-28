@@ -1,9 +1,13 @@
 import { createVElement } from "@/framework";
+import { footer } from "@/components/footer";
+import { sidebar } from "@/components/sidebar";
 
 // ページ名はabout
 export const about = createVElement(
     "body",
     { class: "body",style:"background-color: #D9D9D9;"  },
+    footer,
+    sidebar,
     createVElement(
         "main",
         {
