@@ -6,8 +6,8 @@ import { sidebar } from "@/components/sidebar";
 //ページ名は新規登録
 export const create = createVElement(
     "body",
-    { class: "body",
-      style:"background: #D9D9D9",
+    { 
+        class: "backgroundColor",style:"background-color: #fffffff;width:100vw;height:100vh; padding-left: 5%;" 
       
   },
     footer,
@@ -20,6 +20,11 @@ export const create = createVElement(
         createVElement(
             "div",
             {},
+            createVElement(
+                "h1",
+                {},
+                "  ",
+            ),
             createVElement(
                 "h1",
                 {},
