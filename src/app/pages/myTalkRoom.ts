@@ -35,7 +35,7 @@ export const myTalkRoom = createVElement(
                 type:"text",
                 name:"title",
                 placeholder:"タイトルを入力",
-                style:"line-height:3rem; width:60%; margin:1rem auto 0rem 2rem;  ",
+                style:"line-height:3rem; width:40%; margin:1rem 100rem 0rem 2rem;  ",
                 },
             ),
             createVElement(
@@ -43,7 +43,7 @@ export const myTalkRoom = createVElement(
                 {
                 placeholder:"投稿内容を入力",
                 wrap:"soft",
-                style:"height:10rem; width:80%; margin:1rem auto 0rem 2rem;",
+                style:"height:10rem; width:40%; margin:1rem 100rem 0rem 2rem;",
                 }
             ),
             createVElement(
@@ -51,7 +51,7 @@ export const myTalkRoom = createVElement(
                 {
                 type:"submit",
                 value:"投稿",
-                style:"font-size: large;line-height:2rem; width:30%;margin:1rem auto 1rem 15rem; background: #FDFF88"
+                style:"font-size: large;line-height:2rem; width:30%;margin:2rem 100rem 1rem 10rem; background: #FDFF88"
                 },
             )
 
