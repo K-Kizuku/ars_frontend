@@ -24,7 +24,7 @@ const pages: PagesInfo = {
 export const app = (state, action) => {
   return createVElement(
     "div",
-    { style: "background: #d9d9d9;" },
+    { /*style: "background: #d9d9d9;"*/ },
     routerDOM(pages),
     Link("top", "/"),
     Link("about", "/about"),
