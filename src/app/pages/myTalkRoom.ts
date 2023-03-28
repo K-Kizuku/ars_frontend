@@ -1,9 +1,13 @@
 import { createVElement } from "@/framework";
+import { footer } from "@/components/footer";
+import { sidebar } from "@/components/sidebar";
 
 // ページ名はMyTalkRoom
 export const myTalkRoom = createVElement(
     "body",
-    { class: "body",style:"background-color: #D9D9D9;" },
+    { class: "body",style:"background-color: #fffffff; " },
+    footer,
+    sidebar,
     createVElement(
         "main",
         { class: "main" },
@@ -47,7 +51,7 @@ export const myTalkRoom = createVElement(
                 {
                 type:"submit",
                 value:"投稿",
-                style:"font-size: large;line-height:5rem; width:30%;margin:1rem auto 1rem 2rem;"
+                style:"font-size: large;line-height:2rem; width:30%;margin:1rem auto 1rem 15rem; background: #FDFF88"
                 },
             )
 

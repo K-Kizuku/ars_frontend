@@ -10,7 +10,7 @@ export const login = createVElement(
   {
     class: "backgroundColor",
     // style: "width: 100%, hight: 100%",
-    background: "#D9D9D9",
+    // background: "#D9D9D9",
     style: "margin: 0 9% 0 12%",
   },
 
@@ -25,7 +25,7 @@ export const login = createVElement(
       createVElement(
         "h1",
         {
-          background: "#ffffff",
+          style: "background: #ffffff,",
         },
         "また来てしまったんか! "
       ),
@@ -64,16 +64,18 @@ export const login = createVElement(
           type: "email",
           name: "email",
           placeholder: "e-mail",
+          style:"line-height:3rem; width:60%; margin: 2rem 10rem auto 10rem;  ",
         }),
         createVElement("input", {
           type: "password",
           name: "password",
           placeholder: "password",
+          style:"line-height:3rem; width:60%; margin: 1rem 10rem auto 10rem; ;  ",
         }),
         createVElement("input", {
           type: "submit",
           value: "Enter",
-          style: "background: #FDFF88",
+          style:"line-height:2rem; width:40%; margin: 2rem 12rem auto 16rem; background: #FDFF88;  ",
         })
       )
     )

@@ -4,7 +4,7 @@ import { sidebar } from "@/components/sidebar";
 // ページ名はログインor新規登録
 export const selection = createVElement(
   "body",
-  { class: "body", background: "#D9D9D9" },
+  {  },
   footer,
   sidebar,
   createVElement(
