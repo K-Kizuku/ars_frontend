@@ -53,14 +53,14 @@ export const reaction = createVElement(
         ),
         createVElement( //お気に入り
             "div",
-            { style:"position:flex;" },
+            { style:"display:flex;" },
             createVElement(
                 "img",
-                {src:"",alt:"star"},
+                {src:"src/img/star.png",alt:"star",style:"width:2rem;height:2rem;" },
             ),
             createVElement(
-                "h1",
-                {  },
+                "h2",
+                {},
                 `{}`//favoriteNumber
             ),
         ),
